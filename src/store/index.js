@@ -2,7 +2,12 @@ const redux = require('redux');
 
 
 const counterReducer = (state = {counter : 0},action) => {
-
+if(action.type === 'increase')
+{
+    return ({
+        counter : state.counter + action.number,
+    })
+}
 
 if(action.type === 'increment')
 {
